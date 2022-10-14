@@ -1,0 +1,26 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "9e83de209014d75121b5cda95cfda1b2521608f9",
+  "iOS" : [
+    {
+      "hash" : "6bae44dd07533d7d27e97cf758fa855e229627dc65feb2a44fe859948a07a28e",
+      "name" : "Magnet",
+      "container" : "Magnet.xcframework",
+      "identifier" : "ios-arm64_x86_64-simulator"
+    },
+    {
+      "hash" : "dc9786b295356da352f184dabafaccf50b6dd0264d1781f4dc75757c7886622f",
+      "name" : "Magnet",
+      "container" : "Magnet.xcframework",
+      "identifier" : "ios-arm64"
+    }
+  ]
+}
