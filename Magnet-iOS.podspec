@@ -12,9 +12,9 @@ Pod::Spec.new do |s|
   s.source              = { :http => 'https://github.com/TMPub/Magnet-iOS/archive/refs/tags/1.0.0.zip' }
   s.vendored_frameworks = 'Magnet-iOS-1.0.0/Framework/Magnet.xcframework'
   s.resource_bundles      = {
-    'Magnet' => ['Assets/*.png']
+    'Magnet' => ['Magnet-iOS-1.0.0/Assets/*.png']
   }
-  
+
   s.platform            = :ios, '11.0'
   s.frameworks          = 'Foundation', 'UIKit', 'CoreGraphics'
   s.requires_arc        = true
