@@ -21,9 +21,12 @@ Pod::Spec.new do |s|
   s.static_framework    = true
     
   s.dependency 'TMKit-iOS'
+  s.dependency 'SDWebImage'
+  s.dependency 'ZFPlayer/AVPlayer', '3.3.2'
+    
   s.dependency 'Google-Mobile-Ads-SDK'
   s.dependency 'GoogleMobileAdsMediationFacebook'
   s.dependency 'FBAudienceNetwork'
-  s.dependency 'FBSDKCoreKit'    
+  s.dependency 'FBSDKCoreKit'
   
 end
