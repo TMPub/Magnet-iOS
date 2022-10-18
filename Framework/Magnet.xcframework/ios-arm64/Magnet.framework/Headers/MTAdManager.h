@@ -5,11 +5,12 @@
 //  Created by Magnet on 2020/9/29.
 //  
 
-#import "MTAdDefine.h"
 #import "UIKit/UIKit.h"
 @class MTAdSpace;
 
 NS_ASSUME_NONNULL_BEGIN
+
+FOUNDATION_EXPORT NSString *const MTAdSpaceUpdateNotificationName;
 
 typedef void (^MTPaidEventHandler)(NSString *_Nonnull eventId, NSDictionary *data);
 
@@ -21,7 +22,7 @@ typedef void (^MTPaidEventHandler)(NSString *_Nonnull eventId, NSDictionary *dat
 /// @param appId 开发者在Magnet官网申请的appId.
 /// @param channel 渠道标识，可设置nil表示"AppStore".
 /// @param rootViewController app的入口控制器
-- (void)startWithAppId:(NSString *)appId channel:(NSString *)channel rootViewController:(UIViewController *)rootViewController;
+- (void)startWithAppId:(NSString *)appId channel:(nullable NSString *)channel rootViewController:(UIViewController *)rootViewController;
 
 /// 入口控制器
 @property (nonatomic, strong) UIViewController *rootViewController;
@@ -40,6 +41,12 @@ typedef void (^MTPaidEventHandler)(NSString *_Nonnull eventId, NSDictionary *dat
 
 /// 当前从后台API取得的广告位数据
 @property (nonatomic, strong, readonly) NSArray<MTAdSpace *> *adSpaces;
+
+/// 当前是否有全屏广告在加载
+@property (nonatomic, assign) BOOL isShowingFullScreenAd;
+
+/// YES 代表使用测试环境，且打开 NSLog
+@property (nonatomic, assign) BOOL debugMode;
 
 /// 预缓存广告位
 /// @param adSpaceId 广告位 ID

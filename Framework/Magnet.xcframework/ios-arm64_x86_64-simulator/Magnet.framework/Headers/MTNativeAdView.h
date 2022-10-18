@@ -7,6 +7,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MTNativeAd.h"
+@class MTMediaView;
 @class MTAdSource;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -30,21 +31,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface MTMediaView : UIView
-
-/// Google 广告的媒体内容数据
-@property (nonatomic, strong, nullable) id mediaContent;
-
-@end
-
 @interface MTNativeAdView : UIView
 
 /// 原生广告数据源
 @property (nonatomic, strong) MTNativeAd *nativeAd;
-
 /// 原生广告视图事件代理
 @property (nonatomic, weak) id<MTNativeAdViewDelegate> delegate;
-
 /// 标题
 @property (nonatomic, strong) IBOutlet UILabel *titleLabel;
 /// 跳转按钮

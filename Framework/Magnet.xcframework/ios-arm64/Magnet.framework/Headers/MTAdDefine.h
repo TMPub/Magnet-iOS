@@ -10,6 +10,7 @@
 /// 广告类型
 typedef NS_ENUM(NSUInteger, MTAdSourceType) {
     MTAdSourceTypeNone = 0, // 默认无
+    MTAdSourceTypeBP = 1, // BP广告
     MTAdSourceTypeGoogle = 2, // Google 广告
     MTAdSourceTypeFacebook = 3, // Facebook 广告
     MTAdSourceTypeGoogleMediation = 4, // Google 聚合广告
@@ -37,14 +38,30 @@ typedef NS_ENUM(NSUInteger, MTAdProcessMode) {
     MTAdProcessModeFanout = 2// 并行
 };
 
-#pragma mark - Placement Type
+/// BP 广告素材类型
+typedef NS_ENUM(NSUInteger, BPAdMaterialType) {
+    BPAdMaterialTypeImage = 1, // 素材类型为图片
+    BPAdMaterialTypeVideo = 2, // 素材类型为视频
+    BPAdMaterialTypeAudio = 3, // 素材类型为音频
+    BPAdMaterialTypeScript = 4, // 素材类型为script脚本
+    BPAdMaterialTypeRichMedia = 5, // 素材类型为richMedia
+};
 
-FOUNDATION_EXPORT NSString *const MTAdDisplayingErrorDomain;
+/// BP 视频广告播放进度
+typedef NS_ENUM(NSUInteger,  BPPlayingProgressType) {
+    BPPlayingThird2s = 1, // 播放到 2
+    BPPlayingThird30s = 2, // 播放到 30s
+    BPPlayingFirstQuartile = 3, // 播放到 1/4
+    BPPlayingMidpoint = 4, // 播放到 1/2
+    BPPlayingThirdQuartile = 5, // 播放到 3/4
+};
 
-typedef NS_ENUM(NSInteger, MTAdDisplayingErrors) {
+FOUNDATION_EXPORT NSString *const MTAdErrorDomain;
+
+typedef NS_ENUM(NSInteger, MTAdDisplayingError) {
     /// 未知错误
     MTAdDisplayingErrorUnknown = 0,
-    /// Placement 为空
+    /// adsource 为空
     MTAdDisplayingErrorNoAdSource = -100,
     /// 返回的广告格式和请求的不一致
     MTAdDisplayingErrorAdFormat = -101,

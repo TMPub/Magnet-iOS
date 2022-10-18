@@ -2,7 +2,7 @@
 //  MTBannerAdLoader.h
 //  Magnet
 //
-//  Created by Magnet.li on 2022/1/11.
+//  Created by Magnet on 2022/1/11.
 //  Copyright © 2022 Magnet. All rights reserved.
 //  
 
@@ -36,6 +36,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param loader 悬浮广告加载器
 /// @param bannerView 悬浮广告视图
 - (void)bannerAdDidClick:(MTBannerAdLoader *)loader bannerView:(MTBannerView *)bannerView;
+
+/// 悬浮广告点击
+/// @param loader 悬浮广告加载器
+/// @param bannerView 悬浮广告视图
+- (void)bannerAdDidClose:(MTBannerAdLoader *)loader bannerView:(MTBannerView *)bannerView;
 
 @end
 

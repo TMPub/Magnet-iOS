@@ -16,6 +16,7 @@
 #import "MTAppOpenAdLoader.h"
 #import "MTNativeAdView.h"
 #import "MTBannerView.h"
+#import "MTMediaView.h"
 #import "MTNativeAd.h"
 #import "MTAdSpace.h"
 #import "MTAdSource.h"

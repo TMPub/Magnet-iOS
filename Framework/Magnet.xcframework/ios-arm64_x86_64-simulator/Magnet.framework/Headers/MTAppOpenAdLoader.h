@@ -24,9 +24,6 @@ NS_ASSUME_NONNULL_BEGIN
 // 点击开屏广告
 - (void)appOpenAdDidClick;
 
-// 开屏广告即将出现
-- (void)appOpenAdWillPresent;
-
 // 开屏广告已经出现
 - (void)appOpenAdDidPresent;
 

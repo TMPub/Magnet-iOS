@@ -22,6 +22,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param bannerAdView 悬浮广告视图
 - (void)bannerAdViewDidRecordClick:(MTBannerView *)bannerAdView;
 
+/// 悬浮广告视图已点击关闭
+/// @param bannerAdView 悬浮广告视图
+- (void)bannerAdViewDidClose:(MTBannerView *)bannerAdView;
+
 @end
 
 @interface MTBannerView : UIView

@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MTAdSpace : TMModel
+@interface MTAdSpace : TMModelBase
 
 /// 广告位 ID
 @property (nonatomic, copy) NSString *spaceId;

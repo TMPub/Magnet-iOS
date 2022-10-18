@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MTAdSource : TMModel
+@interface MTAdSource : TMModelBase
 
 /// 广告源类型，取值：GO:Admob,GM:AdmobMediation,FB:Facebook
 @property (nonatomic, assign) MTAdSourceType sourceType;
@@ -35,11 +35,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// banner广告的高度
 @property (nonatomic, assign) NSUInteger adHeight;
 
-/// 广告位所属的 space
+/// 广告位所属的 adSpace
 @property (nonatomic, strong) MTAdSpace *beSpace;
 
-/// 具体平台的广告数据（本地字段）
-@property (nonatomic, strong, nullable) MTMediationAd *mediationAd;
+/// 倒计时
+@property (nonatomic, assign) NSInteger autoCloseTime;
 
 /// 用于缓存的 key 值（source拼接placementId）
 - (NSString *)cachePlacementId;
