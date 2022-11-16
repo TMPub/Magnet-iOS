@@ -40,7 +40,7 @@ FOUNDATION_EXPORT NSString *const MTAdSpaceUpdateNotificationName;
 /// Whether a fullscreen ad is currently loading
 @property (nonatomic, assign) BOOL isShowingFullScreenAd;
 
-/// YES means use the test environment and turn on NSLog YES 代表使用测试环境，且打开 NSLog
+/// Indicates whether the logger should display debug messages. 是否打开调试信息
 @property (nonatomic, assign) BOOL debugMode;
 
 /// Pre-cached ad spaces 预缓存广告位
