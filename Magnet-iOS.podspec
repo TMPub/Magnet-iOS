@@ -9,8 +9,8 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Magnet' => 'Magnet' }
 
-  # s.source           = { http: "https://github.com/TMPub/DIY/releases/download/#{s.version}frameworks.zip" }
-  s.source            = { :http => 'file:' + __dir__ + '/Framework.zip' }
+  s.source           = { http: "https://github.com/TMPub/DIY/releases/download/#{s.version}frameworks.zip" }
+  # s.source            = { :http => 'file:' + __dir__ + '/Framework.zip' }
   s.vendored_frameworks = 'Framework/Magnet.xcframework'
   s.resource_bundles      = {
     'Magnet' => ['Assets/*.png']
