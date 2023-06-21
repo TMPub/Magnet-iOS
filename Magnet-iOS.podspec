@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Magnet-iOS'
-  s.version          = '2.0.0'
+  s.version          = '2.1.1'
   s.summary          = 'Magnet used for mediation with the Google Mobile Ads SDK and Meta Audience Network'
   s.description      = <<-DESC
                       The Magnet SDK is the latest generation advertising featuring refined ad formats and streamlined APIs for access to mobile ad networks and advertising solutions. Magnet helps maximize your fill rate and increase your monetization by sending ad requests to multiple networks to ensure you find the best available network to serve ads.
