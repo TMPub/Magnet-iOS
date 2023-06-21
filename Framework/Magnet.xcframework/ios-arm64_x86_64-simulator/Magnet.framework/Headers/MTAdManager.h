@@ -6,6 +6,7 @@
 //  
 
 #import "UIKit/UIKit.h"
+#import "MTAdDefine.h"
 @class MTAdSpace;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -34,9 +35,6 @@ FOUNDATION_EXPORT NSString *const MTAdSpaceUpdateNotificationName;
 /// Current SDK version 当前SDK版本
 @property (nonatomic, readonly, copy) NSString *sdkVersion;
 
-/// The current ad space data obtained from the backend API 当前从后台API取得的广告位数据
-@property (nonatomic, strong, readonly) NSArray<MTAdSpace *> *adSpaces;
-
 /// Whether a fullscreen ad is currently loading
 @property (nonatomic, assign) BOOL isShowingFullScreenAd;
 
@@ -46,6 +44,10 @@ FOUNDATION_EXPORT NSString *const MTAdSpaceUpdateNotificationName;
 /// Pre-cached ad spaces 预缓存广告位
 /// @param adSpaceId ad space ID 广告位 ID
 - (void)startCacheAdSpace:(NSString *)adSpaceId;
+
+/// The ad space data for specific adFromat
+/// @param adFromat adFormat (Native Banner Reward etc.)
+- (nullable MTAdSpace *)adSpaceForAdFormat:(MTAdFormat)adFromat;
 
 @end
 

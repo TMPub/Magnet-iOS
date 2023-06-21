@@ -14,6 +14,9 @@ typedef NS_ENUM(NSUInteger, MTAdSourceType) {
     MTAdSourceTypeGoogle = 2, // Google Ad
     MTAdSourceTypeFacebook = 3, // Facebook Ad
     MTAdSourceTypeGoogleMediation = 4, // Google Mediation Ad
+    MTAdSourceTypeAppLovin = 5,  // Applovin Ad
+    MTAdSourceTypeMintegral = 6,  // Mintegral Ad
+    MTAdSourceTypeUnity = 7  // Unity Ad
 };
 
 /// 聚合广告下具体的广告类型
