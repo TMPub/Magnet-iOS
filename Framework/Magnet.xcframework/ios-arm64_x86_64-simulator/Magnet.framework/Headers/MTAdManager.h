@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 FOUNDATION_EXPORT NSString *const MTAdSpaceUpdateNotificationName;
 
+typedef void (^MTPaidEventHandler)(NSString *_Nonnull eventId, NSDictionary *data);
+
 @interface MTAdManager : NSObject
 
 + (instancetype)shareInstance;
@@ -41,6 +43,9 @@ FOUNDATION_EXPORT NSString *const MTAdSpaceUpdateNotificationName;
 /// Indicates whether the logger should display debug messages. 是否打开调试信息
 @property (nonatomic, assign) BOOL debugMode;
 
+/// Google 太极产生的打点数据回调
+@property (nonatomic, nullable, copy) MTPaidEventHandler paidEventHandler;
+
 /// Pre-cached ad spaces 预缓存广告位
 /// @param adSpaceId ad space ID 广告位 ID
 - (void)startCacheAdSpace:(NSString *)adSpaceId;
@@ -48,6 +53,8 @@ FOUNDATION_EXPORT NSString *const MTAdSpaceUpdateNotificationName;
 /// The ad space data for specific adFromat
 /// @param adFromat adFormat (Native Banner Reward etc.)
 - (nullable MTAdSpace *)adSpaceForAdFormat:(MTAdFormat)adFromat;
+
+- (NSString *)deviceId;
 
 @end
 

@@ -64,6 +64,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 加载广告。若存在缓存，会直接展示。否则等广告加载成功后展示。同时再次预缓存广告。
 - (void)loadAd:(UIViewController *)showVC;
 
+/// 取消展示广告（在线拉取广告结果出来之前）
+- (void)cancelDisplayAd;
+
 @end
 
 NS_ASSUME_NONNULL_END
